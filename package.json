@@ -1,0 +1,15 @@
+{
+  "name": "quan-ly-ky-thi",
+  "version": "1.0.0",
+  "description": "Ung dung quan ly ky thi ket thuc hoc phan bang Node.js, Express va MySQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0"
+  }
+}

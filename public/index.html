@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quản lý kỳ thi học phần</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🎓 Quản lý kỳ thi</div>
+    <div class="sub">Hệ thống quản lý kỳ thi kết thúc học phần</div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CỔNG QUẢN TRỊ ĐÀO TẠO</p>
+        <h1>Quản lý kỳ thi học phần</h1>
+        <p class="muted">Theo dõi sinh viên, học phần, lịch thi và kết quả trên một giao diện.</p>
+      </div>
+      <span id="dbStatus" class="status">Đang kiểm tra kết nối…</span>
+    </section>
+
+    <section id="stats" class="stats"></section>
+
+    <nav class="tabs">
+      <button class="tab active" data-view="students">Sinh viên</button>
+      <button class="tab" data-view="exams">Lịch thi</button>
+      <button class="tab" data-view="results">Kết quả thi</button>
+      <button class="tab" data-view="courses">Học phần</button>
+    </nav>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2 id="viewTitle">Danh sách sinh viên</h2>
+          <p id="viewDescription" class="muted">Tìm theo mã sinh viên, họ tên hoặc lớp.</p>
+        </div>
+        <input id="search" type="search" placeholder="Tìm sinh viên…" aria-label="Tìm kiếm">
+      </div>
+      <div id="message" class="message" hidden></div>
+      <div class="table-wrap">
+        <table>
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"><tr><td>Đang tải dữ liệu…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <footer>Node.js · Express · MySQL · Bài tập lớn Cơ sở dữ liệu</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
